@@ -4,22 +4,21 @@
 
 ## Project Summary
 
-> Describe the problem or mission statement of the project in 2 - 3 sentences.
+> Your dog is like a child so you should be able to trust who is taking care of them. Our site not only helps you find local sitters but also gives the ability to list out services you desire from the sitter with the best reviews in those fields.
 
 ## Developers
 
-- Developer 1: Role
-  - Portfolio
-  - Github
-  - LinkedIn
-- Developer 2: Role
-  - Portfolio
-  - Github
-  - LinkedIn
-- Developer 3: Role
-  - Portfolio
-  - Github
-  - LinkedIn
+- Nathan Bright: Auth services and partial database assistance.
+  - https://edenhack.github.io/Bootstrap-Portfolio/
+  - https://github.com/edenhack
+  - https://www.linkedin.com/in/nathan-bright-a8827182/
+- Haley Serr: Database
+  - https://haleyserr.github.io/Bootstrap-Portfolio/
+  - https://github.com/haleyserr
+- An Phan: Front End UI
+  - https://antphan98.github.io/portfolio/
+  - https://github.com/antphan98
+  - https://www.linkedin.com/in/antphan/
 
 ## Animated Gifs/Pictures of App
 
@@ -27,23 +26,26 @@
 
 ## Tech Stack
 
-- What languages is it written with
-- What libraries are used
+- Javascript, MySQL, css, html
+- Sequelize, Bootstrap, Jquery
 - Update at the end of the project
 
 ## APIs
 
-- List the two apis
-- Update it has the project evolves
-- make sure its accurate at the end
+- Google Maps API
+- 
 
 ## MVP
 
-- List the Must Have Features
+- Front End Ui
+- User Login system
+- Database with reviews and services
+- Sitter Page with Google API to locate sitters
 
 ## Stretch Goals
 
-- What you will try to accomplish after MVP
+- Local Pet News Page
+- Sitters Reviews
 
 ## Future Development
 
