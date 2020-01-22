@@ -34,37 +34,43 @@ CREATE TABLE `sitters` (
   ,'sitter_name' VARCHAR(250) NOT NULL -- Do we want field for first and last, or just one? What if people want to make up names?/Aren't comfortable with real names being displayed? Might be best to reference everyone by first name only, but keep both in db.  --
   ,'sitter_location' INTEGER (5) -- I think it would be easiest to leverage location by zip code, might have to change for google maps API --
   ,'sitter_available' BOOLEAN NOT NULL DEFAULT true
+  , PRIMARY KEY ( `sitter_id` )  
+);
 
-  -- The below fields indicate whether a particular sitter is able and willing to perform a certain service type --
-  -- Might be easiest to leverage with a series of check boxes during sign up/regisitration --
+-- Per Tish: Move repeated subsets into dedicated table. Will know what each particular entry refers to based on foreign key. Ex: If to know which services a sitter offers, use sitter_id --
+CREATE TABLE 'services' (
+
+  -- Don't really need the service_id but adding for consistency/just in case --
+  `service_id` INTEGER(9) AUTO_INCREMENT NOT NULL
+ 
   ,'service_walk' BOOLEAN NOT NULL DEFAULT false
   ,'service_play' BOOLEAN NOT NULL  DEFAULT false
   ,'service_groom' BOOLEAN NOT NULL DEFAULT false
   ,'service_sit' BOOLEAN NOT NULL DEFAULT false -- sit as in pet sit --
 
-  -- The below fields indicate whether a particular sitter is able and willing to provide service for a particular pet type --
-  -- Might be easiest to leverage with a series of check boxes during sign up/regisitration --
-  -- Not sure if we decided to do only dogs or not --
-  ,'service_largedogs' BOOLEAN NOT NULL DEFAULT false
-  ,'service_mediumdogs' BOOLEAN NOT NULL DEFAULT false
-  ,'service_smalldogs' BOOLEAN NOT NULL DEFAULT false
-  ,'service_cats' BOOLEAN NOT NULL DEFAULT false
-  
-  
-  , PRIMARY KEY ( `sitter_id` )  
+  , FOREIGN KEY ( 'sitter_id' ) REFERENCES sitters(sitter_id)
+  , FOREIGN KEY ( 'review_id' ) REFERENCES sitter_reviews(review_id)
+  , FOREIGN KEY ( 'request_id' ) REFERENCES requests(request_id)
+
 );
+
+
+-- If we are doing more than just dogs --
+
+CREATE TABLE 'animal_types' (
+
+-- Which animals to include? --
+
+FOREIGN KEY ( 'sitter_id' ) REFERENCES sitters(sitter_id)
+
+);
+
 
 CREATE TABLE `sitter_reviews` (
   `review_id` INTEGER(9) AUTO_INCREMENT NOT NULL
   ,'review_rating' INTEGER (1) -- Should be 1 through 5, will do math and round down to nearest whole number to dermine rating --
   ,'review_txt' VARCHAR(250) --Review comments/etc --
- 
-    -- Use the below fields if we want to give rating by service vs average rating --
-    -- Again, might be best managed by check boxes when writing review --
-  ,'service_walk' BOOLEAN NOT NULL DEFAULT false
-  ,'service_play' BOOLEAN NOT NULL  DEFAULT false
-  ,'service_groom' BOOLEAN NOT NULL DEFAULT false
-  ,'service_sit' BOOLEAN NOT NULL DEFAULT false -- sit as in pet sit --
+
 
   , PRIMARY KEY ( `review_id` ) 
   , FOREIGN KEY ( 'sitter_id' ) REFERENCES sitters(sitter_id)
@@ -87,10 +93,6 @@ CREATE TABLE 'contact_info' (
 -- Request is submitted when an owner needs a service --
 CREATE TABLE 'requests' (
   `request_id` INTEGER(9) AUTO_INCREMENT NOT NULL
-  ,'request_walk' BOOLEAN NOT NULL DEFAULT false
-  ,'request_play' BOOLEAN NOT NULL  DEFAULT false
-  ,'request_groom' BOOLEAN NOT NULL DEFAULT false
-  ,'request_sit' BOOLEAN NOT NULL DEFAULT false -- sit as in pet sit --
   , PRIMARY KEY ( `request_id` ) 
   , FOREIGN KEY ( 'owner_id') REFERENCES owners(owner_id)
   , FOREIGN KEY ( 'pet_id' ) REFERENCES pets(pet_id)
