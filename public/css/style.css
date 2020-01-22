@@ -1,0 +1,34 @@
+* {
+    font-family: 'Righteous', cursive;
+}
+
+.logo {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.services-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 45px;
+}
+
+.doghouse {
+    border-radius: 100px;
+    margin: 40px 90px;
+}
+
+.pawprint {
+    border-radius: 100px;
+    margin: 40px 70px;
+}
+
+.dogfood {
+    border-radius: 100px;
+    margin: 40px 70px;
+}
+
+.bird {
+    border-radius: 100px;
+    margin: 40px 70px;
+}
