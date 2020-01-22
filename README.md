@@ -1,4 +1,4 @@
-# Name of Project
+# PawPals Pet Sitting
 
 > [Live Site](Put the deployed link here once you have it)
 
