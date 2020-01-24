@@ -44,7 +44,7 @@ CREATE TABLE 'services' (
   `service_id` INTEGER(9) AUTO_INCREMENT NOT NULL
  
   ,'service_walk' BOOLEAN NOT NULL DEFAULT false
-  ,'service_play' BOOLEAN NOT NULL  DEFAULT false
+  ,'service_visit' BOOLEAN NOT NULL  DEFAULT false
   ,'service_groom' BOOLEAN NOT NULL DEFAULT false
   ,'service_sit' BOOLEAN NOT NULL DEFAULT false -- sit as in pet sit --
 
@@ -61,7 +61,15 @@ CREATE TABLE 'animal_types' (
 
 -- Which animals to include? --
 
-FOREIGN KEY ( 'sitter_id' ) REFERENCES sitters(sitter_id)
+-- Dogs, cats, birds, reptiles, exotic --
+
+ 'sits_dogs' BOOLEAN NOT NULL DEFAULT false
+,'sits_cats' BOOLEAN NOT NULL DEFAULT false
+,'sits_birds' BOOLEAN NOT NULL DEFAULT false
+,'sits_exotics' BOOLEAN NOT NULL DEFAULT false
+
+
+,FOREIGN KEY ( 'sitter_id' ) REFERENCES sitters(sitter_id)
 
 );
 
