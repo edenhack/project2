@@ -25,7 +25,7 @@ VALUES
 ,('DOG', 'MIN PIN', 'S', 'TWINKLE TOES', '2');
 
 
-INSERT INTO owners ('owner_name', 'owner_location')
+INSERT INTO owners (owner_name, owner_location)
 VALUES
   ('RUBY WOO', '77090')
 , ('DAVE WANDERLUST', '77654')
@@ -37,7 +37,7 @@ VALUES
 , ('TENNESSEE COWBOY', '77362')
 , ('WALTER WHITE', '77494');
 
-INSERT INTO sitters ('sitter_name', 'sitter_location')
+INSERT INTO sitters (sitter_name, sitter_location)
 VALUES
  ('RESPONSIBLE RITA', '77494')
 ,('WACKY WAYNE', '77449'  )
@@ -46,7 +46,7 @@ VALUES
 ,('KATE HUDSON', '77321');
 
 
-INSERT INTO sitter_animal_types ('sits_dogs', 'sits_cats', 'sits_birds', 'sits_exotics', 'sitter_id')
+INSERT INTO sitter_animal_types (sits_dogs, sits_cats, sits_birds, sits_exotics, sitter_id)
 VALUES
  ('true','true','false','true','1')
 ,('true','false','true','false','2')
@@ -54,7 +54,7 @@ VALUES
 ,('false','false','false','false','4')
 ,('false','true','false','false','5');
 
-INSERT INTO services ('service_walk', 'service_visit', 'service_groom', 'service_sit', 'sitter_id')
+INSERT INTO services (service_walk, service_visit, service_groom, service_sit, sitter_id)
 VALUES
 ('true','true','true','true','1')
 ,('true','true','false','true','2')
@@ -63,7 +63,7 @@ VALUES
 ,('false','true','true','true','5');  
 
 
-INSERT INTO sitter_reviews ('review_rating', 'review_txt', 'owner_id', 'pet_id')
+INSERT INTO sitter_reviews (review_rating, review_txt, owner_id, pet_id)
 VALUES
 ('1', 'Worst.Service.Ever.', '1', '1')
 ,('2', 'Sitter was late. I value punctuality.', '1', '2')
