@@ -49,4 +49,20 @@
 
 h1 {
     font-size: 30px;
+    text-align: center;
+}
+
+/* REVIEWS PAGE */
+
+.leave-review {
+    margin: 30px;
+    text-align: left;
+}
+
+.box {
+    margin: 30px 10px;
+}
+
+.reviews {
+    margin-top: 30px;
 }
