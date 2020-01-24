@@ -15,20 +15,38 @@
 
 .doghouse {
     border-radius: 100px;
-    margin: 40px 90px;
+    margin: 40px;
 }
 
 .pawprint {
     border-radius: 100px;
-    margin: 40px 70px;
+    margin: 40px;
+
 }
 
 .dogfood {
     border-radius: 100px;
-    margin: 40px 70px;
+    margin: 40px;
+
 }
 
 .bird {
     border-radius: 100px;
-    margin: 40px 70px;
+    margin: 40px;
+
+}
+
+.hero-body {
+    background-image: url(../images/basicsdogcatheader.jpg);
+    background-repeat: no-repeat;
+    background-size: 1500px 700px;
+    background-position: center;
+}
+
+.column {
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
 }
