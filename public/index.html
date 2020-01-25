@@ -1,198 +1,217 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>🐾 Welcome to Paw Pals! 🐾</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-  </head>
-  <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          <img src="https://emojis.wiki/emoji-pics/messenger/paw-prints-messenger.png" width="30" height="30">
-          <h1 class="logo">Paw Pals</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🐾 Welcome to Paw Pals! 🐾</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="https://emojis.wiki/emoji-pics/messenger/paw-prints-messenger.png" width="30" height="30">
+        <h1 class="logo">Paw Pals</h1>
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+        data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
         </a>
-    
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+
+        <a class="navbar-item">
+          Become a Paw Pal Sitter
         </a>
-      </div>
-    
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-            Home
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
           </a>
-    
-          <a class="navbar-item">
-            Become a Paw Pal Sitter
-          </a>
-    
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              More
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Reviews
             </a>
-    
-            <div class="navbar-dropdown">
-              <a class="navbar-item">
-                Reviews
-              </a>
-              <a class="navbar-item">
-                Jobs
-              </a>
-              <a class="navbar-item">
-                Contact
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item">
-                Report an issue
-              </a>
-            </div>
-          </div>
-        </div>
-    
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class = "hidden" id= "user-name">
-              <label>
-              Welcome <pre id="ipt-user-profile"> !</pre>
-              </label>
-            </div>
-            <div class="buttons">
-              <a class="button is-primary">
-                <strong>Sign up</strong>
-              </a>
-              <a class="button is-light" button id="btn-login" disabled="true" onclick="login()">
-                Log in
-              </a>
-              <a class="button is-primary" button id="btn-logout" disabled="true" onclick="logout()">
-                <strong>Log out</strong>
-              </a>
-            </div>
+            <a class="navbar-item">
+              Jobs
+            </a>
+            <a class="navbar-item">
+              Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
           </div>
         </div>
       </div>
-    </nav>
 
-
-    <section class="hero is-medium is-primary is-bold">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title" p style="color:black">
-            Welcome to Paw Pals,
-          </h1>
-          <h2 class="subtitle" p style="color:black">
-            we got your furballs covered.
-          </h2>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="hidden" id="user-name">
+            <label>
+              Welcome
+              <pre id="ipt-user-profile"> !</pre>
+            </label>
+          </div>
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <button class="button is-light" button id="btn-login" disabled="false" onclick="login()">
+              Log in
+            </button>
+            <button class="button is-primary" button id="btn-logout" disabled="true" onclick="logout()">
+              <strong>Log out</strong>
+            </button>
+          </div>
         </div>
       </div>
-    </section>
-
-    <section class = "services">
-      <h1 class="services-title">
-        Our Services
-      </h1>
-    </section>
-
-    <div class="container">
-<div class="columns">
-    <div class="column">
-      <img class="doghouse" src="./images/doghouse.png" width="200">
-      <h1>Pet Sitting</h1>
-      <p>Going out of town and need someone to watch your pets? We will make sure they're safe and taken out daily. Overnight stays are also included.</p>
-
     </div>
-    <div class="column">
-      <img class="pawprint" src="./images/pawprint.png" width="200">
-      <h1>Dog Walking</h1>
-      <p>Our walkers can guaruntee your pups will be satisfied with their walks. Just let us know how long and how far of a walk you'd like.</p>
+  </nav>
+
+
+  <section class="hero is-medium is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title" p style="color:black">
+          Welcome to Paw Pals,
+        </h1>
+        <h2 class="subtitle" p style="color:black">
+          we got your furballs covered.
+        </h2>
+      </div>
     </div>
+  </section>
 
-    <div class="column">
-      <img class="dogfood" src="./images/dogfood.png" width="200">
-      <h1>Drop-In Visits</h1>
-      <p>Going out of town and need someone to watch your pets? We will make sure they're safe and taken out daily.</p>
-    </div>
+  <section class="services">
+    <h1 class="services-title">
+      Our Services
+    </h1>
+  </section>
 
-    <div class="column">
-      <img class="bird" src="./images/grooming.png" width="200">
-      <h1>Grooming</h1>
-      <p>If your pets need some attention with their hygiene, we have pals who can spice them up! Bathing, nail clipping and letting your pets relax is our job.</p>
-    </div>
-
-
-</div>
-
-<div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Modal title</p>
-      <button class="delete" aria-label="close"></button>
-    </header>
-    <section class="modal-card-body">
-      <!-- Content ... -->
-    </section>
-    <footer class="modal-card-foot">
-      <button class="button is-success">Save changes</button>
-      <button class="button">Cancel</button>
-    </footer>
-  </div>
-</div>
-
-
-<footer class="footer has-background-light is-bold">
-  <div class="content has-text-centered has-text-white">
-    <h1>Paw Pals</h1>
+  <div class="container">
     <div class="columns">
       <div class="column">
-        <h5>About Us</h5>
-        <p class="has-text-center" p style="color:black">Paw Pals is a company that truly values the needs of every pet owner. We strive to make sure our service is unbeatable and your pets will be happy and healthy with our sitters!
+        <img class="doghouse" src="./images/doghouse.png" width="200">
+        <h1>Pet Sitting</h1>
+        <p>Going out of town and need someone to watch your pets? We will make sure they're safe and taken out daily.
+          Overnight stays are also included.</p>
+
+      </div>
+      <div class="column">
+        <img class="pawprint" src="./images/pawprint.png" width="200">
+        <h1>Dog Walking</h1>
+        <p>Our walkers can guaruntee your pups will be satisfied with their walks. Just let us know how long and how far
+          of a walk you'd like.</p>
+      </div>
+
+      <div class="column">
+        <img class="dogfood" src="./images/dogfood.png" width="200">
+        <h1>Drop-In Visits</h1>
+        <p>Going out of town and need someone to watch your pets? We will make sure they're safe and taken out daily.
         </p>
       </div>
+
       <div class="column">
-        <h5>Links</h5>
-        <ul>
-          <li><a href="#">Become a Paw Pal Sitter</a></li>
-          <li><a href="#">Reviews</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+        <img class="bird" src="./images/grooming.png" width="200">
+        <h1>Grooming</h1>
+        <p>If your pets need some attention with their hygiene, we have pals who can spice them up! Bathing, nail
+          clipping and letting your pets relax is our job.</p>
       </div>
-      <div class="column">
-        <h5>Important</h5>
-        <ul>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-        </ul>
-      </div>
-      <div class="column">
-        <h5>Subscribe</h5>
-        <div class="control has-icons-left has-icons-right">
-          <input class="input is-medium" type="email" placeholder="Email">
-          <span class="icon is-left">
-          <i class="fa fa-envelope"></i>
-          </span>
-        </div>
-        <a class="button is-success is-rounded subscribe-btn">Subscribe</a>
+
+
+    </div>
+
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Modal title</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <!-- Content ... -->
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Save changes</button>
+          <button class="button">Cancel</button>
+        </footer>
       </div>
     </div>
-  </div>
-</footer>
 
-<script src="https://cdn.auth0.com/js/auth0-spa-js/1.2/auth0-spa-js.production.js"></script>
-<script src="js/app.js"></script>
 
-  </body>
+    <footer class="footer has-background-light is-bold">
+      <div class="content has-text-centered has-text-white">
+        <h1>Paw Pals</h1>
+        <div class="columns">
+          <div class="column">
+            <h5>About Us</h5>
+            <p class="has-text-center" p style="color:black">Paw Pals is a company that truly values the needs of every
+              pet owner. We strive to make sure our service is unbeatable and your pets will be happy and healthy with
+              our sitters!
+            </p>
+          </div>
+          <div class="column">
+            <h5>Links</h5>
+            <ul>
+              <li><a href="#">Become a Paw Pal Sitter</a></li>
+              <li><a href="#">Reviews</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h5>Important</h5>
+            <ul>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h5>Subscribe</h5>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-medium" type="email" placeholder="Email">
+              <span class="icon is-left">
+                <i class="fa fa-envelope"></i>
+              </span>
+            </div>
+            <a class="button is-success is-rounded subscribe-btn">Subscribe</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.2/auth0-spa-js.production.js"></script>
+    <script src="./js/app.js"></script>
+
+</body>
+
 </html>

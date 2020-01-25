@@ -1,12 +1,12 @@
 let auth0 = null;
-const fetchAuthConfig = () => fetch("../config/auth_config.json");
+const fetchAuthConfig = () => fetch("/auth_config.json");
 const configureClient = async () => {
     const response = await fetchAuthConfig();
     const config = await response.json();
 
     auth0 = await createAuth0Client({
         domain: config.domain,
-        client_id: config.client_id
+        client_id: config.clientId
     });
 };
 
@@ -22,7 +22,7 @@ window.onload = async () => {
     }
 
     const query = window.location.search;
-    if(query.includes("code=") && query.includes("state")) {
+    if(query.includes("code=") && query.includes("state=")) {
         await auth0.handleRedirectCallback();
 
         updateUI();
@@ -40,13 +40,15 @@ const updateUI = async () => {
     if (isAuthenticated) {
         document.getElementById("user-name").classList.remove("hidden");
 
-        document.getElementById(
-            "ipt-access-token"
-        ).innerHTML = await auth0.getTokenSilently();
-
-        document.getElementById("ipt-user-profile").innerHTML = JSON.stringify(
-            await auth0.getUser()
-        );
+//        document.getElementById(
+//            "ipt-access-token"
+//        ).innerHTML = await auth0.getTokenSilently();
+//        console.log(user);
+        document.getElementById("ipt-user-profile").innerHTML = 
+            await auth0.getUser().then( function (result, error){
+                console.log(result);
+                return result.nickname;
+            });
     } else {
         document.getElementById("user-name").classList.add("hidden");
     }
