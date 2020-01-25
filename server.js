@@ -8,6 +8,10 @@ const app = express();
 
 app.use(express.static("public"));
 
+app.get("./config/auth_config.json", (req, res) => {
+  res.sendFile(join(__dirname, "auth_config.json"));
+});
+
 app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
   });
