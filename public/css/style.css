@@ -80,6 +80,18 @@ h1 {
     margin-top: 30px;
 }
 
+.dog-walking-img,
+.kitten-img,
+.bunny-img {
+    border-radius: 125px;
+    border: 15px solid lightgray;
+}
+
+.dog-walking-desc {
+    background-color: lightgrey;
+    
+    
+}
 /* BECOME A PET SITTER PAGE */
 
 .sitter-header {
