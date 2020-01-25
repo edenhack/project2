@@ -56,6 +56,17 @@ h1 {
     margin-right: -50px;
 }
 
+/* Login Section */
+
+.hidden {
+    display: none;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+
 /* REVIEWS PAGE */
 
 .leave-review {

@@ -4,6 +4,7 @@
   "description": "> [Live Site](Put the deployed link here once you have it)",
   "main": "server.js",
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.6.2",
     "express": "^4.17.1"
   },
   "devDependencies": {},
