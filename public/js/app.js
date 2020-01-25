@@ -40,10 +40,6 @@ const updateUI = async () => {
     if (isAuthenticated) {
         document.getElementById("user-name").classList.remove("hidden");
 
-//        document.getElementById(
-//            "ipt-access-token"
-//        ).innerHTML = await auth0.getTokenSilently();
-//        console.log(user);
         document.getElementById("ipt-user-profile").innerHTML = 
             await auth0.getUser().then( function (result, error){
                 console.log(result);
