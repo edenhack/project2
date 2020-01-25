@@ -79,3 +79,28 @@ h1 {
 .reviews {
     margin-top: 30px;
 }
+
+/* BECOME A PET SITTER PAGE */
+
+.sitter-header {
+    background-image: url(../images/doggies.jpg);
+    background-repeat: no-repeat;
+    background-size: 1500px 700px;
+    background-position: center;
+}
+
+.sitter-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sitter-form {
+    margin: 20px 400px 20px 400px;
+    border: 15px solid lightgray;
+    padding: 50px;
+}
+
+.catanddog {
+    float: right;
+    margin-top: -200px;
+}
