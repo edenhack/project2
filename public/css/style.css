@@ -7,10 +7,17 @@
     margin-left: 10px;
 }
 
-.services-title {
+.services-title,
+.pets-title {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
     font-size: 45px;
+}
+
+
+
+.container {
+    position: relative;
 }
 
 .doghouse {
@@ -59,6 +66,32 @@ h1 {
 
 .subscribe-btn {
     margin-top: 10px;
+}
+
+.cat-review {
+    margin-top: 20px;
+    margin-left: 170px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.cat-review-body {
+    
+    background-color: papayawhip;
+    box-sizing: content-box;  
+  width: 20%;
+  border-radius: 50%;
+  height: 20%;
+  padding: 3%;  
+  position: absolute;
+  left: 15%;
+  bottom: 10%;
+  text-align: center;
+    
+}
+
+.name {
+    text-align: center;
 }
 
 /* Login Section */
