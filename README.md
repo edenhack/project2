@@ -2,6 +2,16 @@
 
 > [Live Site](Put the deployed link here once you have it)
 
+## Demo Sitter Login
+
+petpaltestsitter@gmail.com
+Lic0ric3Whip
+
+## Demo Owner Login
+
+petpaltestowner@gmail.com
+L3m0nDr0p*
+
 ## Project Summary
 
 > Your dog is like a child so you should be able to trust who is taking care of them. Our site not only helps you find local sitters but also gives the ability to list out services you desire from the sitter with the best reviews in those fields.
