@@ -1,7 +1,7 @@
 
 USE petpals_db;
 
-
+ -- Having some problems seeding pets --
 INSERT INTO pets (pet_type, pet_breed, pet_size, pet_name, owner_id) 
 VALUES 
 
@@ -18,7 +18,7 @@ VALUES
 ,('EXOTIC', 'BOA CONSTRICTOR', 'L', 'HULK', '10')
 
 -- A COUPLE OF OWNERS HAVE MULTIPLE PETS --
- ('DOG', 'DALMATIAN', 'L', 'SPOT', '1')
+,('DOG', 'DALMATIAN', 'L', 'SPOT', '1')
 ,('DOG', 'TERRIER', 'M', 'RI RI', '1') 
 ,('DOG', 'WHIPPET', 'M', 'WILLOW', '1') 
 ,('DOG', 'CHIHUAHUA', 'S', 'HOLLYWOOD', '2') 
@@ -48,19 +48,19 @@ VALUES
 
 INSERT INTO sitter_animal_types (sits_dogs, sits_cats, sits_birds, sits_exotics, sitter_id)
 VALUES
- ('true','true','false','true','1')
-,('true','false','true','false','2')
-,('true','true','false','false','3')
-,('false','false','false','false','4')
-,('false','true','false','false','5');
+ (true , true , false , true ,'1')
+,(true , false , true , false ,'2')
+,(true , true , false , false ,'3')
+,(false , false , false , false ,'4')
+,(false , true , false , false ,'5');
 
 INSERT INTO services (service_walk, service_visit, service_groom, service_sit, sitter_id)
 VALUES
-('true','true','true','true','1')
-,('true','true','false','true','2')
-,('true','true','true','true','3')
-,('false','true','false','true','4')
-,('false','true','true','true','5');  
+ (true , true , true , true ,'1')
+,(true , true , false , true ,'2')
+,(true , true , true , true ,'3')
+,(false , true , false , true ,'4')
+,(false , true , true , true ,'5');  
 
 
 INSERT INTO sitter_reviews (review_rating, review_txt, owner_id, pet_id)
