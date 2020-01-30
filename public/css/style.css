@@ -94,6 +94,14 @@ h1 {
     text-align: center;
 }
 
+.dancingcat {
+    margin-top: 5%;
+}
+
+.modaltext {
+    text-align: center;
+}
+
 /* Login Section */
 
 .hidden {
