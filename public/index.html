@@ -183,7 +183,7 @@
           <div class="column">
             <h5>Subscribe to our newsletter!</h5>      
             <div class="control has-icons-left has-icons-right">
-              <input class="input is-medium" type="email" placeholder="Email">
+              <input class="input is-medium email-input" type="email" placeholder="Email">
               <span class="icon is-left">
                 <i class="fa fa-envelope"></i>
               </span>
@@ -193,6 +193,24 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card modaltext">
+        <header class="modal-card-head">
+          <p class="modal-card-title">🐾 Thanks for your subscription! 🐾</p>
+          <button class="delete" aria-label="close" data-dismiss="modal"></button>
+        </header>
+        <section class="modal-card-body">
+          <p>You will now receive daily news, cute pet pics and occasional discounts on your next booking with a sitter!</p>
+          
+          <img class="dancingcat" src="./images/dancingcat.gif" alt="dancing cat gif">
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success" data-dismiss="modal">Close</button>
+        </footer>
+      </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -209,3 +227,14 @@
 </body>
 
 </html>
+
+<script>
+
+$(document).ready(function(){
+  $(".subscribe-btn").click(function(){
+    $(".modal").modal();
+    $(".email-input").val("");
+  });
+});
+
+</script>
