@@ -29,11 +29,11 @@
       
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item">
+            <a class="navbar-item" href="/">
               Home
             </a>
       
-            <a class="navbar-item">
+            <a class="navbar-item" href="/sitter">
               Become a Paw Pal Sitter
             </a>
       
@@ -43,14 +43,11 @@
               </a>
       
               <div class="navbar-dropdown">
-                <a class="navbar-item">
+                <a class="navbar-item" href="/reviews">
                   Reviews
                 </a>
-                <a class="navbar-item">
-                  Jobs
-                </a>
-                <a class="navbar-item">
-                  Contact
+                <a class="navbar-item" href="/request-sitter">
+                  Request a Service
                 </a>
                 <hr class="navbar-divider">
                 <a class="navbar-item">
@@ -143,9 +140,6 @@
           <div class="box">
             <article class="media">
               <div class="media-left">
-                <figure class="image is-64x64">
-                  <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
-                </figure>
               </div>
               <div class="media-content">
                 <div class="content">
@@ -165,7 +159,7 @@
       </div>
       </div>
 
-      <footer class="footer has-background-light is-bold">
+      <!-- <footer class="footer has-background-light is-bold">
         <div class="content has-text-centered has-text-white">
           <h1>Paw Pals</h1>
           <div class="columns">
@@ -180,11 +174,9 @@
               <h5>Links</h5>
               <a href="/sitter">Become a Paw Pal Sitter</a>
             <br>
-            <a href="#">Reviews</a>
+            <a href="/reviews">Reviews</a>
             <br>
-            <a href="#">About Us</a>
-            <br>
-            <a href="#">Contact</a>
+            <a href="/request-sitter">About Us</a>
             </div>
             <div class="column">
               <h5>Social Media</h5>
@@ -209,7 +201,19 @@
             </div>
           </div>
         </div>
-      </footer>
+      </footer> -->
     
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.2/auth0-spa-js.production.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

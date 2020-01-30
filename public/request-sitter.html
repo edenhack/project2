@@ -35,7 +35,7 @@
               Home
             </a>
     
-            <a class="navbar-item">
+            <a class="navbar-item" href="/sitter">
               Become a Paw Pal Sitter
             </a>
     
@@ -45,14 +45,11 @@
               </a>
     
               <div class="navbar-dropdown">
-                <a class="navbar-item">
+                <a class="navbar-item" href="/reviews">
                   Reviews
                 </a>
-                <a class="navbar-item">
-                  Jobs
-                </a>
-                <a class="navbar-item">
-                  Contact
+                <a class="navbar-item" href="/request-sitter">
+                  Request a Service
                 </a>
                 <hr class="navbar-divider">
                 <a class="navbar-item">
@@ -106,6 +103,68 @@
             </div>
           </div>
 
+          <div class="field">
+            <label class="label">Which service(s) would you like done?</label>
+            <div class="control">
+                <label class="pet-sit">
+                    <input type="checkbox">
+                    Pet Sitting
+                </label>
+                <label class="dog-walk">
+                  <input type="checkbox">
+                    Dog Walking
+                  </label>
+                  <label class="drop-in">
+                  <input type="checkbox">
+                    Drop In Visits
+                  </label>
+                  <label class="grooming">
+                    <input type="checkbox">
+                      Grooming
+                    </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">What type of pet do you have?</label>
+            <div class="control">
+                <label class="dogs">
+                    <input type="checkbox">
+                    Dogs
+                </label>
+                <label class="cats">
+                  <input type="checkbox">
+                    Cats
+                  </label>
+                  <label class="birds">
+                  <input type="checkbox">
+                    Bird
+                  </label>
+                  <label class="exotic-animals">
+                    <input type="checkbox">
+                      Exotic Animal (Bunny, Lizard, Hamster, etc.)
+                    </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Zip Code</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="ex. 77000">
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link">Submit</button>
+            </div>
+            <div class="control">
+              <button class="button is-link is-light">Cancel</button>
+            </div>
+          </div>
+          </div>
+
+          <img class="catanddog" src="./images/catanddog.png" alt="dog and cat">
           
 </body>
 </html>
