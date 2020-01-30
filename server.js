@@ -8,6 +8,8 @@ const app = express();
 
 app.use(express.static("public"));
 
+require("./routes/html-routes")(app);
+
 app.get("/auth_config.json", (req, res) => {
   res.sendFile(join(__dirname, "./config/auth_config.json"));
 });
