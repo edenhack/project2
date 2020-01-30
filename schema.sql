@@ -37,6 +37,7 @@ CREATE TABLE sitters (
   , sitter_name VARCHAR(250) NOT NULL -- Do we want field for first and last, or just one? What if people want to make up names?/Aren't comfortable with real names being displayed? Might be best to reference everyone by first name only, but keep both in db.  --
   , sitter_location INTEGER (5) -- I think it would be easiest to leverage location by zip code, might have to change for google maps API --
   , sitter_available BOOLEAN NOT NULL DEFAULT true
+  , sitter_bio VARCHAR(250)
   , PRIMARY KEY ( sitter_id )  
 );
 
