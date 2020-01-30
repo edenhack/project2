@@ -160,3 +160,12 @@ h1 {
     float: right;
     margin-top: -200px;
 }
+
+/* REQUEST A SITTER PAGE */
+
+.request-header {
+    background-image: url(../images/corgi.jpg);
+    background-repeat: no-repeat;
+    background-size: 1500px 700px;
+    background-position: center;
+}

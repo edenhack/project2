@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>🐾Request a Sitter🐾</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="https://emojis.wiki/emoji-pics/messenger/paw-prints-messenger.png" width="30" height="30">
+            <h1 class="logo">Paw Pals</h1>
+          </a>
+    
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+    
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              Home
+            </a>
+    
+            <a class="navbar-item">
+              Become a Paw Pal Sitter
+            </a>
+    
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More
+              </a>
+    
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  Reviews
+                </a>
+                <a class="navbar-item">
+                  Jobs
+                </a>
+                <a class="navbar-item">
+                  Contact
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Report an issue
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="hidden" id="user-name">
+                <label>
+                  Welcome
+                  <strong><pre id="ipt-user-profile"> !</pre></strong>
+                </label>
+              </div>
+              <div class="buttons">
+                <button class="button is-primary" button id="btn-login" disabled="true" onclick="login()">
+                  <strong>Log in</strong>
+                </button>
+                <button class="button is-primary" button id="btn-logout" disabled="true" onclick="logout()">
+                  <strong>Log out</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+          <section class="hero is-medium is-primary">
+            <div class="hero-body request-header">
+              <div class="container">
+                <h1 class="title">
+            <br>
+                </h1>
+                <h2 class="subtitle">
+    <br>
+                </h2>
+              </div>
+            </div>
+          </section>
+    
+          <h1 class="sitter-title">Request A Sitter</h1>
+          <h3 p style="text-align: center;">Fill out the form and we'll match you to the best sitters near you!</h3>
+          <div class="container sitter-form">
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Full name">
+            </div>
+          </div>
+
+          
+</body>
+</html>
