@@ -64,11 +64,12 @@ app.get("/api/requests", function (req,res){
 
 app.post("api/reviews", function(req, res) {
 
-    db.Reviews.create({
+    db.Reviews.create(
 
         // Define what we are bringing in (req.body....)
+        req.body
 
-    }).then(function(dbReviews){
+    ).then(function(dbReviews){
 
         res.json(dbReviews)
 
