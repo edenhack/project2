@@ -37,13 +37,13 @@ VALUES
 , ('TENNESSEE COWBOY', '77362')
 , ('WALTER WHITE', '77494');
 
-INSERT INTO sitters (sitter_name, sitter_location)
+INSERT INTO sitters (sitter_name, sitter_email, sitter_location, sitter_bio)
 VALUES
- ('RESPONSIBLE RITA', '77494')
-,('WACKY WAYNE', '77449'  )
-,('ADVENTEROUS ARNOLD', '77090')
-,('BOB MARLEY', '77396')
-,('KATE HUDSON', '77321');
+ ('RESPONSIBLE RITA','mergherita@aol.com' ,'77494', 'I have always loved dogs and am dedicated to their care.')
+,('WACKY WAYNE', 'waynesworld92@gmail.com', '77449', 'I am a vet tech and specialize in care for elderly animals. If your pet has special medical needs, I am your man'  )
+,('ADVENTEROUS ARNOLD', 'readyforrecess@gmail.com' , '77090', 'Reptiles are fun! Snakes, lizards, dinosaurs- I love them all!')
+,('BOB MARLEY', 'chillphil@yahoo.com', '77396' , 'My suave personality is ideal for handling animals with behavioral issues.')
+,('KATE HUDSON','prettyinpink@123.com' ,'77321', 'I guess you can call me an old cat lady. MEOW!');
 
 
 INSERT INTO sitter_animal_types (sits_dogs, sits_cats, sits_birds, sits_exotics, sitter_id)
