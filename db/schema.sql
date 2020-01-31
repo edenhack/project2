@@ -35,6 +35,7 @@ CREATE TABLE pets (
 CREATE TABLE sitters (
     sitter_id INTEGER(9) AUTO_INCREMENT NOT NULL
   , sitter_name VARCHAR(250) NOT NULL -- Do we want field for first and last, or just one? What if people want to make up names?/Aren't comfortable with real names being displayed? Might be best to reference everyone by first name only, but keep both in db.  --
+  , sitter_email VARCHAR(250) NOT NULL
   , sitter_location INTEGER (5) -- I think it would be easiest to leverage location by zip code, might have to change for google maps API --
   , sitter_available BOOLEAN NOT NULL DEFAULT true
   , sitter_bio VARCHAR(250)
@@ -66,6 +67,8 @@ CREATE TABLE sitter_animal_types (
 
 CREATE TABLE sitter_reviews (
     review_id INTEGER(9) AUTO_INCREMENT NOT NULL
+  , review_name VARCHAR(250)
+  , review_email VARCHAR(250)
   , review_rating INTEGER (1) -- Should be 1 through 5, will do math and round down to nearest whole number to dermine rating --
   , review_txt VARCHAR(250) -- Review comments/etc --
   , sitter_id INTEGER(9)

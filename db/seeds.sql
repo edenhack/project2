@@ -37,13 +37,13 @@ VALUES
 , ('TENNESSEE COWBOY', '77362')
 , ('WALTER WHITE', '77494');
 
-INSERT INTO sitters (sitter_name, sitter_location)
+INSERT INTO sitters (sitter_name, sitter_email, sitter_location, sitter_bio)
 VALUES
- ('RESPONSIBLE RITA', '77494')
-,('WACKY WAYNE', '77449'  )
-,('ADVENTEROUS ARNOLD', '77090')
-,('BOB MARLEY', '77396')
-,('KATE HUDSON', '77321');
+ ('RESPONSIBLE RITA','mergherita@aol.com' ,'77494', 'I have always loved dogs and am dedicated to their care.')
+,('WACKY WAYNE', 'waynesworld92@gmail.com', '77449', 'I am a vet tech and specialize in care for elderly animals. If your pet has special medical needs, I am your man'  )
+,('ADVENTEROUS ARNOLD', 'readyforrecess@gmail.com' , '77090', 'Reptiles are fun! Snakes, lizards, dinosaurs- I love them all!')
+,('BOB MARLEY', 'chillphil@yahoo.com', '77396' , 'My suave personality is ideal for handling animals with behavioral issues.')
+,('KATE HUDSON','prettyinpink@123.com' ,'77321', 'I guess you can call me an old cat lady. MEOW!');
 
 
 INSERT INTO sitter_animal_types (sits_dogs, sits_cats, sits_birds, sits_exotics, sitter_id)
@@ -63,13 +63,13 @@ VALUES
 ,(false , true , true , true ,'5');  
 
 
-INSERT INTO sitter_reviews (review_rating, review_txt, owner_id, pet_id)
+INSERT INTO sitter_reviews (review_name, review_email, review_rating, review_txt, owner_id, pet_id)
 VALUES
-('1', 'Worst.Service.Ever.', '1', '1')
-,('2', 'Sitter was late. I value punctuality.', '1', '2')
-,('3', 'The service was alright. Site is awesome.', '2', '3')
-,('4', 'I love this sitter and would recommend to all of my friends!', '3', '3')
-,('5', 'BEST DAY EVER!!!!!!!!', '2', '1');
+( 'Elastigirl','abc123@aol.com','1', 'Worst.Service.Ever.', '1', '1')
+,('Mr.Incredible', "strongman95@yahoo.com",'2', 'Sitter was late. I value punctuality.', '1', '2')
+,('Violet', 'tonyiscool@aol.com','3', 'The service was alright. Site is awesome.', '2', '3')
+,('Flash', 'needforspeed@runner.com','4', 'I love this sitter and would recommend to all of my friends!', '3', '3')
+,('Jack Jack', 'ilovecookies@earthlink.com','5', 'BEST DAY EVER!!!!!!!!', '2', '1');
 
 
 
