@@ -1,6 +1,8 @@
+
+
 module.exports = function (sequelize, DataTypes) { 
     let Reviews = sequelize.define("Reviews", {
-      // Info/Validation Here
+      review_name:{}
     });
     return Reviews; 
   
