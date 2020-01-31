@@ -63,13 +63,13 @@ VALUES
 ,(false , true , true , true ,'5');  
 
 
-INSERT INTO sitter_reviews (review_rating, review_txt, owner_id, pet_id)
+INSERT INTO sitter_reviews (review_name, review_email, review_rating, review_txt, owner_id, pet_id)
 VALUES
-('1', 'Worst.Service.Ever.', '1', '1')
-,('2', 'Sitter was late. I value punctuality.', '1', '2')
-,('3', 'The service was alright. Site is awesome.', '2', '3')
-,('4', 'I love this sitter and would recommend to all of my friends!', '3', '3')
-,('5', 'BEST DAY EVER!!!!!!!!', '2', '1');
+( 'Elastigirl','abc123@aol.com','1', 'Worst.Service.Ever.', '1', '1')
+,('Mr.Incredible', "strongman95@yahoo.com",'2', 'Sitter was late. I value punctuality.', '1', '2')
+,('Violet', 'tonyiscool@aol.com','3', 'The service was alright. Site is awesome.', '2', '3')
+,('Flash', 'needforspeed@runner.com','4', 'I love this sitter and would recommend to all of my friends!', '3', '3')
+,('Jack Jack', 'ilovecookies@earthlink.com','5', 'BEST DAY EVER!!!!!!!!', '2', '1');
 
 
 

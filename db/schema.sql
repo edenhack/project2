@@ -66,6 +66,8 @@ CREATE TABLE sitter_animal_types (
 
 CREATE TABLE sitter_reviews (
     review_id INTEGER(9) AUTO_INCREMENT NOT NULL
+  , review_name VARCHAR(250)
+  , review_email VARCHAR(250)
   , review_rating INTEGER (1) -- Should be 1 through 5, will do math and round down to nearest whole number to dermine rating --
   , review_txt VARCHAR(250) -- Review comments/etc --
   , sitter_id INTEGER(9)
