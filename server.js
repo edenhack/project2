@@ -15,10 +15,6 @@ app.get("/auth_config.json", (req, res) => {
   res.sendFile(join(__dirname, "./config/auth_config.json"));
 });
 
-app.get("/*", (_, res) => {
-  res.sendFile(join(__dirname, "./public/index.html"));
-});
-
 app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
   });
