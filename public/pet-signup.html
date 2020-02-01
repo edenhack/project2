@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>🐾Request a Sitter🐾</title>
+    <title>🐾Pet Sign Up🐾</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
+    
 
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
@@ -51,10 +52,6 @@
                 <a class="navbar-item" href="/request-sitter">
                   Request a Service
                 </a>
-
-                <a class="navbar-item" href="/petsignup">
-                  Pet Sign-up
-                </a>
                 <hr class="navbar-divider">
                 <a class="navbar-item">
                   Report an issue
@@ -85,7 +82,7 @@
       </nav>
 
           <section class="hero is-medium is-primary">
-            <div class="hero-body request-header">
+            <div class="hero-body petsignup">
               <div class="container">
                 <h1 class="title">
             <br>
@@ -97,35 +94,13 @@
             </div>
           </section>
     
-          <h1 class="sitter-title">🐾 Request A Sitter 🐾</h1>
-          <h3 p style="text-align: center;">Fill out the form and we'll match you to the best sitters near you!</h3>
+          <h1 class="sitter-title">🐾 Sign Up Your Pet 🐾</h1>
+          <h3 p style="text-align: center;">Just fill out the information for your pals</h3>
           <div class="container sitter-form">
           <div class="field">
-            <label class="label">Name</label>
+            <label class="label">Pet Name</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Full name">
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Which service(s) would you like done?</label>
-            <div class="control">
-                <label class="pet-sit">
-                    <input type="checkbox">
-                    Pet Sitting
-                </label>
-                <label class="dog-walk">
-                  <input type="checkbox">
-                    Dog Walking
-                  </label>
-                  <label class="drop-in">
-                  <input type="checkbox">
-                    Drop In Visits
-                  </label>
-                  <label class="grooming">
-                    <input type="checkbox">
-                      Grooming
-                    </label>
+              <input class="input" type="text" placeholder="ex. Mr. Sparkles">
             </div>
           </div>
 
@@ -134,11 +109,11 @@
             <div class="control">
                 <label class="dogs">
                     <input type="checkbox">
-                    Dogs
+                    Dog
                 </label>
                 <label class="cats">
                   <input type="checkbox">
-                    Cats
+                    Cat
                   </label>
                   <label class="birds">
                   <input type="checkbox">
@@ -152,9 +127,27 @@
           </div>
 
           <div class="field">
-            <label class="label">Zip Code</label>
+            <label class="label">What breed is your pet?</label>
             <div class="control">
-              <input class="input" type="text" placeholder="ex. 77000">
+              <input class="input" type="text" placeholder="ex. Dachshund">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">What size is your pet?</label>
+            <div class="control">
+                <label class="small">
+                    <input type="checkbox">
+                    S (Less than 10 lbs)
+                </label>
+                <label class="medium">
+                  <input type="checkbox">
+                    M (10-30 lbs)
+                  </label>
+                  <label class="large">
+                  <input type="checkbox">
+                    L (30+ lbs)
+                  </label>
             </div>
           </div>
 
@@ -171,6 +164,7 @@
           <img class="catanddog" src="./images/catanddog.png" alt="dog and cat">
        
           <script src="./js/app.js"></script>
+
 
 </body>
 </html>
