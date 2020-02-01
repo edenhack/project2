@@ -177,3 +177,10 @@ h1 {
     background-size: 1500px 700px;
     background-position: center;
 }
+
+.petsignup {
+    background-image: url(../images/header_image.jpg);
+    background-repeat: no-repeat;
+    background-size: 1500px 700px;
+    background-position: center;
+}
