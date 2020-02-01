@@ -26,7 +26,4 @@ module.exports = function (app) {
     app.get("/availablesitters", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/available-sitters.html"))
     });
-   app.get("*", function(req, res) {
-       res.sendFile(path.join(__dirname, "../public/index.html"));
-     });
-}
+};
