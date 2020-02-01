@@ -21,7 +21,7 @@ $(document).ready(function () {
         authorId = url.split("=")[1];
     }
 
-    getAuthors();
+    getReviewData();
 
     function handleFormSubmit(event) {
         event.preventDefault();

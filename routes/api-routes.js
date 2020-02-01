@@ -1,18 +1,13 @@
 // Get the models
 var db = require("../models");
-module.exports = function(app){
+var express = require("express")
+var apiRoutes = express.Router();
 
-// ROUTES
-
-
-// GET
-// A little confused on the DB Names/ When to include S vs not
-// Included S since that how I setup the variable in each relative models doc
 
 // GET Reviews
-app.get("/api/reviews", function (req,res){
-   
-    db.Reviews.findAll({}).then(function(dbReviews){
+api.get("/api/reviews", function (req, res) {
+
+    db.Reviews.findAll({}).then(function (dbReviews) {
         res.json(dbReviews);
 
     });
@@ -20,9 +15,9 @@ app.get("/api/reviews", function (req,res){
 
 // GET Sitters
 
-app.get("/api/sitters", function (req,res){
-   
-    db.Sitters.findAll({}).then(function(dbSitters){
+api.get("/api/sitters", function (req, res) {
+
+    db.Sitters.findAll({}).then(function (dbSitters) {
         res.json(dbSitters);
 
     });
@@ -30,9 +25,9 @@ app.get("/api/sitters", function (req,res){
 
 // GET Owners
 
-app.get("/api/owners", function (req,res){
-   
-    db.Owners.findAll({}).then(function(dbOwners){
+api.get("/api/owners", function (req, res) {
+
+    db.Owners.findAll({}).then(function (dbOwners) {
         res.json(dbOwners);
 
     });
@@ -40,9 +35,9 @@ app.get("/api/owners", function (req,res){
 
 // Get Pets
 
-app.get("/api/pets", function (req,res){
-   
-    db.Pets.findAll({}).then(function(dbPets){
+api.get("/api/pets", function (req, res) {
+
+    db.Pets.findAll({}).then(function (dbPets) {
         res.json(dbPets);
 
     });
@@ -50,9 +45,9 @@ app.get("/api/pets", function (req,res){
 
 // Get Requests
 
-app.get("/api/requests", function (req,res){
-   
-    db.Requests.findAll({}).then(function(dbRequests){
+api.get("/api/requests", function (req, res) {
+
+    db.Requests.findAll({}).then(function (dbRequests) {
         res.json(dbRequests);
 
     });
@@ -62,18 +57,18 @@ app.get("/api/requests", function (req,res){
 
 // POST Reviews
 
-app.post("api/reviews", function(req, res) {
+api.post("api/reviews", function (req, res) {
 
     db.Reviews.create(
 
         // Define what we are bringing in (req.body....)
         req.body
 
-    ).then(function(dbReviews){
+    ).then(function (dbReviews) {
 
         res.json(dbReviews)
 
-    }).catch(function(err){
+    }).catch(function (err) {
 
         res.json(err);
 
@@ -83,17 +78,17 @@ app.post("api/reviews", function(req, res) {
 
 // POST Sitters
 
-app.post("api/sitters", function(req, res) {
+api.post("api/sitters", function (req, res) {
 
     db.Sitters.create({
 
         // Define what we are bringing in (req.body....)
 
-    }).then(function(dbSitters){
+    }).then(function (dbSitters) {
 
         res.json(dbSitters)
 
-    }).catch(function(err){
+    }).catch(function (err) {
 
         res.json(err);
 
@@ -103,17 +98,17 @@ app.post("api/sitters", function(req, res) {
 
 // POST Owners
 
-app.post("api/Owners", function(req, res) {
+api.post("api/Owners", function (req, res) {
 
     db.Owners.create({
 
         // Define what we are bringing in (req.body....)
 
-    }).then(function(dbOwners){
+    }).then(function (dbOwners) {
 
         res.json(dbOwners)
 
-    }).catch(function(err){
+    }).catch(function (err) {
 
         res.json(err);
 
@@ -123,17 +118,17 @@ app.post("api/Owners", function(req, res) {
 
 // POST Pets
 
-app.post("api/pets", function(req, res) {
+api.post("api/pets", function (req, res) {
 
     db.Pets.create({
 
         // Define what we are bringing in (req.body....)
 
-    }).then(function(dbPets){
+    }).then(function (dbPets) {
 
         res.json(dbPets)
 
-    }).catch(function(err){
+    }).catch(function (err) {
 
         res.json(err);
 
@@ -143,17 +138,17 @@ app.post("api/pets", function(req, res) {
 
 // Post Requests
 
-app.post("api/requests", function(req, res) {
+api.post("api/requests", function (req, res) {
 
     db.Requests.create({
 
         // Define what we are bringing in (req.body....)
 
-    }).then(function(dbRequests){
+    }).then(function (dbRequests) {
 
         res.json(dbRequests)
 
-    }).catch(function(err){
+    }).catch(function (err) {
 
         res.json(err);
 
@@ -172,21 +167,21 @@ app.post("api/requests", function(req, res) {
 
 // UPDATE Requests
 
-app.put("/api/requests", function(req, res){
+api.put("/api/requests", function (req, res) {
 
     db.Requests.update({
-        
+
         // Define what we are updating (req.body....)
 
     }, {
         where: {
             request_id: req.body.request_id
         }
-    }).then(function(dbRequests){
+    }).then(function (dbRequests) {
 
         res.json(dbRequests);
 
-    }).catch(function(err){
+    }).catch(function (err) {
 
         res.json(err);
 
@@ -196,22 +191,22 @@ app.put("/api/requests", function(req, res){
 
 // UPDATE Sitter Availability
 
-app.put("/api/sitters", function(req, res){
+api.put("/api/sitters", function (req, res) {
 
     db.Requests.update({
-        
+
         // Define what we are updating (req.body....)
         sitter_availability: req.body.sitter_availability
-        
+
     }, {
         where: {
             sitter_id: req.body.sitter_id
         }
-    }).then(function(dbSitters){
+    }).then(function (dbSitters) {
 
         res.json(dbSitters);
 
-    }).catch(function(err){
+    }).catch(function (err) {
 
         res.json(err);
 
@@ -221,27 +216,25 @@ app.put("/api/sitters", function(req, res){
 
 // UPDATE Pet Availability
 
-app.put("/api/pets", function(req, res){
+api.put("/api/pets", function (req, res) {
 
     db.Petss.update({
-        
+
         // Define what we are updating (req.body....)
         pet_availability: req.body.pet_availability
-        
+
     }, {
         where: {
             pet_id: req.body.pet_id
         }
-    }).then(function(dbPets){
+    }).then(function (dbPets) {
 
         res.json(dbPets);
 
-    }).catch(function(err){
+    }).catch(function (err) {
 
         res.json(err);
 
     });
 
 });
-
-};
