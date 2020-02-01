@@ -160,7 +160,7 @@
 
           <div class="field is-grouped">
             <div class="control">
-              <button class="button is-link">Submit</button>
+              <button class="button is-link submit">Submit</button>
             </div>
             <div class="control">
               <button class="button is-link is-light">Cancel</button>
@@ -169,8 +169,30 @@
           </div>
 
           <img class="catanddog" src="./images/catanddog.png" alt="dog and cat">
+
+          <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card modaltext">
+              <header class="modal-card-head">
+                <p class="modal-card-title">🐾 Thanks for signing up! 🐾</p>
+                <button class="delete" aria-label="close" data-dismiss="modal"></button>
+              </header>
+              <section class="modal-card-body">
+                <p>We look forward to having you on our team!</p>
+                
        
           <script src="./js/app.js"></script>
+
+          <script>
+
+            $(document).ready(function(){
+              $(".submit").click(function(){
+                $(".modal").modal();
+              
+              });
+            });
+            
+            </script>
 
 </body>
 </html>
