@@ -14,7 +14,7 @@
 
     <style>
       #map {
-        width: 100%;
+        width: 95%;
         height: 400px;
         background-color: grey;
       }
@@ -109,13 +109,16 @@
 
       function initMap() {
         // var houston = {lat: 29.760, lng: -95.369}
-        var center = {lat: 34.052235, lng: -118.243683};;
+        var center = {lat: 29.760, lng: -95.369};
         var locations = [
-    ['Los Angeles', 34.052235, -118.243683],
-    ['Santa Monica', 34.024212, -118.496475],
-    ['Redondo Beach', 33.849182, -118.388405],
-    ['Newport Beach', 33.628342, -117.927933],
-    ['Long Beach', 33.770050, -118.193739]
+    ['Houston',  29.760, -95.369],
+    ['Katy', 29.7858, -95.8245],
+    ['Bellaire', 29.7058, -95.4588],
+    ['Pearland', 29.5636, -95.2860],
+    ['Spring', 30.0799, -95.4172],
+    ['Jersey Village', 29.8877, -95.5630],
+    ['Sugarland', 29.5984, -95.6226],
+    ['Pasadena', 29.6911, -95.2091]
   ];
 
   // var map = new google.maps.Map(
@@ -128,7 +131,6 @@
     center: center
   });
   var marker = new google.maps.Marker({
-    position: center,
     map: map,
     icon: icon
   });
@@ -147,7 +149,8 @@
     marker = new google.maps.Marker({
       position: new google.maps.LatLng(locations[count][1], locations[count][2]),
       map: map,
-      title: locations[count][0]
+      title: locations[count][0],
+      icon: icon
     });
 
 google.maps.event.addListener(marker, 'click', (function (marker, count) {

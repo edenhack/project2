@@ -190,7 +190,7 @@
       
       <div class="field is-grouped">
         <div class="control">
-          <button class="button is-link">Submit</button>
+          <button class="button is-link submit-btn">Submit</button>
         </div>
         <div class="control">
           <button class="button is-link is-light">Cancel</button>
@@ -198,10 +198,43 @@
       </div>
 
     </div>
-
     <img class="catanddog" src="./images/catanddog.png" alt="dog and cat">
+
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card modaltext">
+        <header class="modal-card-head">
+          <p class="modal-card-title">🐾 Thanks for signing up! 🐾</p>
+          <button class="delete" aria-label="close" data-dismiss="modal"></button>
+        </header>
+        <section class="modal-card-body">
+          <p>We look forward to having you on our team!</p>
+
     
     <script src="./js/app.js"></script>
+    
 
 </body>
 </html>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+<script src="https://cdn.auth0.com/js/auth0-spa-js/1.2/auth0-spa-js.production.js"></script>
+<script src="./js/app.js"></script>
+<script>
+
+  $(document).ready(function(){
+    $(".submit-btn").click(function(){
+      $(".modal").modal();
+      $(".sitter-form")[0].reset();
+    });
+  });
+  
+  </script>
