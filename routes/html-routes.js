@@ -23,6 +23,9 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../public/pet-signup.html"))
     });
 
+    app.get("/availablesitters", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/available-sitters.html"))
+    });
    app.get("*", function(req, res) {
        res.sendFile(path.join(__dirname, "../public/index.html"));
      });
