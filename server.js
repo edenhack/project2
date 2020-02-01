@@ -2,7 +2,6 @@ const express = require("express");
 const path = require('path')
 //require('dotenv').config()
 const { join } = require("path");
-const db = require ("./models");
 
 const PORT = process.env.PORT || 8080;
 
@@ -33,8 +32,6 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-db.sequelize.sync({force: false}).then(function(){
-  app.listen(PORT, function() {
-    console.log ("App listening on PORT " + PORT);
-  });
+app.listen(PORT, function() {
+  console.log("Server listening on: http://localhost:" + PORT);
 });
